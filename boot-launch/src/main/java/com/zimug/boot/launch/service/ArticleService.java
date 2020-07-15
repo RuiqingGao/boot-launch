@@ -1,8 +1,9 @@
 package com.zimug.boot.launch.service;
 
-import org.springframework.stereotype.Service;
+import com.zimug.boot.launch.model.Article;
 
 
-@Service
-public class ArticleService {
+
+public interface ArticleService {
+	public String saveArticle(Article article);
 }

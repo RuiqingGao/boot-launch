@@ -34,14 +34,14 @@ public class ArticleController {
 		return AjaxResponse.success(article1);
 	}
 
-	//增加一篇Article ，使用POST方法(RequestBody方式接收参数)
+	//增加一篇Article ，使用POST方法(RequestBody方式接收参数)ArticleRestControllerTest2
 	//@RequestMapping(value = "/articles",method = RequestMethod.POST)
 	@PostMapping("/articles")
 	public AjaxResponse saveArticle(@RequestBody Article article){
 
 		//因为使用了lombok的Slf4j注解，这里可以直接使用log变量打印日志
 		log.info("saveArticle:" + article);
-		return AjaxResponse.success(article);
+		return AjaxResponse.success(articleService.saveArticle(article));
 	}
 
 
