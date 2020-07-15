@@ -1,12 +1,14 @@
 package com.zimug.boot.launch;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.zimug.boot.launch.controller.ArticleController;
 import com.zimug.boot.launch.model.Article;
 import com.zimug.boot.launch.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.HttpMethod;
@@ -23,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 
 
 @Slf4j
-@SpringBootTest
+@WebMvcTest(ArticleController.class)//只针对controller进行测试
 @AutoConfigureMockMvc
 @ExtendWith(SpringExtension.class)
 public class ArticleRestControllerTest3 {
