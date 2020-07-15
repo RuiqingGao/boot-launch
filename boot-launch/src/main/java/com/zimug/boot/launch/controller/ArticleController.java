@@ -3,10 +3,12 @@ package com.zimug.boot.launch.controller;
 import com.zimug.boot.launch.AjaxResponse;
 import com.zimug.boot.launch.model.Article;
 import com.zimug.boot.launch.model.Reader;
+import com.zimug.boot.launch.service.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -16,6 +18,8 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/rest")
 public class ArticleController {
+	@Resource
+	ArticleService articleService;
 
 
 	@GetMapping( "/articles/{id}")
@@ -33,11 +37,11 @@ public class ArticleController {
 	//增加一篇Article ，使用POST方法(RequestBody方式接收参数)
 	//@RequestMapping(value = "/articles",method = RequestMethod.POST)
 	@PostMapping("/articles")
-	public AjaxResponse saveArticle(@RequestBody Article article,@RequestHeader String aaa){
+	public AjaxResponse saveArticle(@RequestBody Article article){
 
 		//因为使用了lombok的Slf4j注解，这里可以直接使用log变量打印日志
 		log.info("saveArticle:" + article);
-		return AjaxResponse.success();
+		return AjaxResponse.success(article);
 	}
 
 
