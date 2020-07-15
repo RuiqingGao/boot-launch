@@ -2,11 +2,14 @@ package com.zimug.boot.launch.controller;
 
 import com.zimug.boot.launch.AjaxResponse;
 import com.zimug.boot.launch.model.Article;
+import com.zimug.boot.launch.model.Reader;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 
 @RestController
@@ -18,7 +21,12 @@ public class ArticleController {
 	@GetMapping( "/articles/{id}")
 	AjaxResponse getArticle(@PathVariable Long id) {
 
-		Article article1 = Article.builder().id(1L).author("zimug").content("spring boot 2.深入浅出").createTime(new Date()).title("t1").build();
+		List<Reader> readers = new ArrayList<Reader>(){{
+			add(new Reader("kobe",21));
+			add(new Reader("kobe2",22));
+		}};
+
+		Article article1 = Article.builder().id(1L).author("zimug").content("spring boot 2.深入浅出").createTime(new Date()).title("t1").reader(readers).build();
 		return AjaxResponse.success(article1);
 	}
 
