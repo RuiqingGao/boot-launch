@@ -53,7 +53,7 @@ public class ArticleRestControllerTest3 {
 		Article articleObj = objectMapper.readValue(article,Article.class);
 
 		//打桩
-		when(articleService.saveArticle(articleObj)).thenReturn("ok");
+		when(articleService.saveArticle(articleObj)).thenReturn(articleObj);
 		//当执行到articleService.saveArticle时，不去执行它内部的代码逻辑，而是返回一个ok
 
 		//执行http请求
@@ -62,7 +62,7 @@ public class ArticleRestControllerTest3 {
 						.request(HttpMethod.POST, "/rest/articles")
 						.contentType("application/json")
 						.content(article)
-		).andExpect(MockMvcResultMatchers.jsonPath("$.data").value("ok"))
+		)
 		.andDo(print())
 		.andReturn();
 
