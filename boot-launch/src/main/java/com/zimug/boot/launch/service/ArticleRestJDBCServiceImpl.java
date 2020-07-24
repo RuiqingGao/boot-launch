@@ -29,6 +29,7 @@ public class ArticleRestJDBCServiceImpl implements ArticleService {
 	public Article saveArticle(Article article) {
 		articleJDBCDAO.save(article,primaryJdbcTemplate);
 		articleJDBCDAO.save(article,secondaryJdbcTemplate);
+//		int a = 2/0;    //人为制造一个被除数为0的异常，发现其中一个数据库中存入了数据，但是另一个数据库中没有存入数据。
 		return article;
 	}
 
