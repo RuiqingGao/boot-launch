@@ -1,5 +1,6 @@
 package com.zimug.boot.launch.dao.testdb2;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 @Data
 @Entity
 @Builder
+@AllArgsConstructor
 public class Message {
     
     @Id

@@ -1,0 +1,6 @@
+{"id":"127.0.0.1.tm159567279101700002","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm2","state":"COMMITTING","expires":1595672800924,"resourceName":"secondary"}]}
+{"id":"127.0.0.1.tm159567279101700002","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm2","state":"TERMINATED","expires":1595672800929,"resourceName":"secondary"}]}
+{"id":"127.0.0.1.tm159567279091200001","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm1","state":"COMMITTING","expires":1595672800943,"resourceName":"primary"},{"uri":"127.0.0.1.tm3","state":"COMMITTING","expires":1595672800943,"resourceName":"secondary"}]}
+{"id":"127.0.0.1.tm159567279091200001","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm1","state":"TERMINATED","expires":1595672800945,"resourceName":"primary"},{"uri":"127.0.0.1.tm3","state":"TERMINATED","expires":1595672800945,"resourceName":"secondary"}]}
+{"id":"127.0.0.1.tm159567279578700003","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm4","state":"COMMITTING","expires":1595672805770,"resourceName":"primary"}]}
+{"id":"127.0.0.1.tm159567279578700003","wasCommitted":true,"participants":[{"uri":"127.0.0.1.tm4","state":"TERMINATED","expires":1595672805770,"resourceName":"primary"}]}
