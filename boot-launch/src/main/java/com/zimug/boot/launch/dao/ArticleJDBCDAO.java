@@ -1,6 +1,6 @@
 package com.zimug.boot.launch.dao;
 
-import com.zimug.boot.launch.model.Article;
+import com.zimug.boot.launch.dao.testdb.Article;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

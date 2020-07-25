@@ -1,6 +1,5 @@
-package com.zimug.boot.launch.dao;
+package com.zimug.boot.launch.dao.testdb;
 
-import com.zimug.boot.launch.model.Article;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ArticleRepository extends JpaRepository<Article,Long> {

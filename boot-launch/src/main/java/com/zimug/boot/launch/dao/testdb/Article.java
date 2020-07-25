@@ -1,4 +1,4 @@
-package com.zimug.boot.launch.model;
+package com.zimug.boot.launch.dao.testdb;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

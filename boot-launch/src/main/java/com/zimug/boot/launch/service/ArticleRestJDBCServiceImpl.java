@@ -1,7 +1,7 @@
 package com.zimug.boot.launch.service;
 
-import com.zimug.boot.launch.dao.ArticleRepository;
-import com.zimug.boot.launch.model.Article;
+import com.zimug.boot.launch.dao.testdb.ArticleRepository;
+import com.zimug.boot.launch.dao.testdb.Article;
 import com.zimug.boot.launch.model.ArticleVO;
 import com.zimug.boot.launch.utils.DozerUtils;
 import lombok.extern.slf4j.Slf4j;
