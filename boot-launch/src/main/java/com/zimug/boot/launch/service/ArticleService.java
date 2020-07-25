@@ -1,19 +1,19 @@
 package com.zimug.boot.launch.service;
 
-import com.zimug.boot.launch.model.Article;
+import com.zimug.boot.launch.model.ArticleVO;
 
 
 import java.util.List;
 
 public interface ArticleService {
 
-	Article saveArticle(Article article);
+	void saveArticle(ArticleVO article);
 
 	void deleteArticle(Long id);
 
-	void updateArticle(Article article);
+	void updateArticle(ArticleVO article);
 
-	Article getArticle(Long id);
+	ArticleVO getArticle(Long id);
 
-	List<Article> getAll();
+	List<ArticleVO> getAll();
 }
